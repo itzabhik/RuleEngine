@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D7DA6CC-05A8-4FF2-A781-CC58C61F131E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RulesEngine</RootNamespace>
+    <AssemblyName>RulesEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic.Core, Version=1.2.7.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.Core.1.2.7\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Diagnostic\IDiagnosticAwareEntity.cs" />
+    <Compile Include="GroupRuleSet\LamdaGroupRuleSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuleEngineContext\IRuleEngineContext.cs" />
+    <Compile Include="RuleEngineContext\RuleEngineContext.cs" />
+    <Compile Include="RuleEngineContext\RuleEngineContextHolder.cs" />
+    <Compile Include="RuleEngineExceptions\ExpressionParserException.cs" />
+    <Compile Include="RuleEngineExceptions\PlaceHolderException.cs" />
+    <Compile Include="RuleEngineContext\ChildDynamicType.cs" />
+    <Compile Include="RuleEngineExceptions\PropertyNotFoundException.cs" />
+    <Compile Include="RuleEngineExceptions\ProprtyTypeMismatch.cs" />
+    <Compile Include="RuleEngineMetadata\RuleAwareEntityPropertyInfo.cs" />
+    <Compile Include="RuleExecutionRule\FirstRuleExecutor.cs" />
+    <Compile Include="RuleExecutionRule\IRuleExecutor.cs" />
+    <Compile Include="RuleExecutionRule\LastRuleExecutor.cs" />
+    <Compile Include="RuleEngineMetadata\AggregatePropertyMetadata.cs" />
+    <Compile Include="RuleModel\DynamicContext.cs" />
+    <Compile Include="RuleModel\RuleAwareEntity_Diagnostic.cs" />
+    <Compile Include="RuleModel\RuleAwareEntity_ParsingProps.cs" />
+    <Compile Include="RuleModel\Grouping.cs" />
+    <Compile Include="RuleModel\IEntityIdProvider.cs" />
+    <Compile Include="RuleModel\Property.cs" />
+    <Compile Include="RuleExecutionRule\RuleExecutionFactory.cs" />
+    <Compile Include="RuleExecutionRule\RuleExecutionRuleEnum.cs" />
+    <Compile Include="RuleModel\PropertyBag.cs" />
+    <Compile Include="RuleModel\RuleAwareEntity.cs" />
+    <Compile Include="RuleModel\ContextAwareRuleEntity.cs" />
+    <Compile Include="RuleEngineContext\RuleEntityContextMetadata.cs" />
+    <Compile Include="RuleModel\RuleAwareEntity_Static.cs" />
+    <Compile Include="RuleParser\AbstractCustomPlaceHolderProvider.cs" />
+    <Compile Include="RuleParser\AggregateFunctionParser.cs" />
+    <Compile Include="RuleParser\CustomTypeProvider.cs" />
+    <Compile Include="RuleParser\GroupKeyExpressionParser.cs" />
+    <Compile Include="RuleParser\IAggregateFunctionParser.cs" />
+    <Compile Include="RuleParser\ICustomPlaceHolderProvider.cs" />
+    <Compile Include="RuleParser\IGroupKeyExpressionParser.cs" />
+    <Compile Include="RuleParser\IPlaceHolderParser.cs" />
+    <Compile Include="RuleParser\IPropertyRuleExpressionParser.cs" />
+    <Compile Include="RuleParser\List.cs" />
+    <Compile Include="RuleParser\PlaceHolderParser.cs" />
+    <Compile Include="RuleParser\PlaceHolderTextParser.cs" />
+    <Compile Include="RuleParser\PropertyRuleExpressionParser.cs" />
+    <Compile Include="RuleParser\RuleExpressionParserFactory.cs" />
+    <Compile Include="RuleParser\StringRulePLaceHolderParser.cs" />
+    <Compile Include="GroupRuleSet\GroupChildRuleSetBuilder.cs" />
+    <Compile Include="Rules\GroupChildRulesetDefaultRuleBuilder.cs" />
+    <Compile Include="GroupRuleSet\AbstractGroupRuleSet.cs" />
+    <Compile Include="GroupRuleSet\GroupRuleSetBuilder.cs" />
+    <Compile Include="Rules\GroupChildRulesetPropertyRuleBuilder.cs" />
+    <Compile Include="GroupRuleSet\IGroupRuleSet.cs" />
+    <Compile Include="Ruleset\IRuleset.cs" />
+    <Compile Include="Ruleset\Ruleset.cs" />
+    <Compile Include="Ruleset\RulesetBuilder.cs" />
+    <Compile Include="Rules\AbstractRuleBuilder.cs" />
+    <Compile Include="Rules\DefaultRuleBuilder.cs" />
+    <Compile Include="Rules\EntryCriteriaRule.cs" />
+    <Compile Include="RuleParser\IRuleExpressionParser.cs" />
+    <Compile Include="RuleParser\StringRuleExpressionParser.cs" />
+    <Compile Include="Rules\AbstractRule.cs" />
+    <Compile Include="Rules\IPropertyRule.cs" />
+    <Compile Include="Rules\IRule.cs" />
+    <Compile Include="Rules\PropertyRule.cs" />
+    <Compile Include="Rules\PropertyRuleBuilder.cs" />
+    <Compile Include="Tests\Models\Blogs\Blog.cs" />
+    <Compile Include="Tests\Models\Blogs\Post.cs" />
+    <Compile Include="Tests\Models\Company.cs" />
+    <Compile Include="Tests\Models\Country.cs" />
+    <Compile Include="Tests\Models\Employee.cs" />
+    <Compile Include="Tests\Models\Function.cs" />
+    <Compile Include="Tests\Models\SubFunction.cs" />
+    <Compile Include="Tests\RuleEngineDynamicTest.cs" />
+    <Compile Include="Tests\RuleEngineInstanceTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

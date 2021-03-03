@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1321
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulesEngine", "RulesEngine\RulesEngine.csproj", "{0D7DA6CC-05A8-4FF2-A781-CC58C61F131E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuleEngineTest", "RuleEngineTest\RuleEngineTest.csproj", "{DACFFB7F-7631-42C9-A80D-5307D5B06E4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D7DA6CC-05A8-4FF2-A781-CC58C61F131E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D7DA6CC-05A8-4FF2-A781-CC58C61F131E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D7DA6CC-05A8-4FF2-A781-CC58C61F131E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D7DA6CC-05A8-4FF2-A781-CC58C61F131E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DACFFB7F-7631-42C9-A80D-5307D5B06E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACFFB7F-7631-42C9-A80D-5307D5B06E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACFFB7F-7631-42C9-A80D-5307D5B06E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACFFB7F-7631-42C9-A80D-5307D5B06E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E665423-D737-4BF0-B13E-74E4EBA595A2}
+	EndGlobalSection
+EndGlobal
