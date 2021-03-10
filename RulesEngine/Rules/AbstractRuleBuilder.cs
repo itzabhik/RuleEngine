@@ -1,4 +1,5 @@
-﻿using RulesEngine.RuleModel;
+﻿using RulesEngine.RuleEngineContext;
+using RulesEngine.RuleModel;
 using RulesEngine.RuleParser;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,11 @@ namespace RulesEngine.Rules
         private List<TemporarypropertyHolder> _tempPrpertyHolder;
         internal readonly RuleEngineContext.RuleEngineContext _context;
         private static string actionpropertyName = "[[Action]]";
-        protected AbstractRuleBuilder(RuleEngineContext.RuleEngineContext context)
+        protected AbstractRuleBuilder(IRuleEngineContext context)
         {
             _properties = new Dictionary<PropertyRule<TEntity>.PropertyHolder, Func<TEntity, bool>>();
             _tempPrpertyHolder = new List<TemporarypropertyHolder>();
-            _context = context;
+            _context = context as RuleEngineContext.RuleEngineContext;
 
 
         }

@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Linq.Dynamic.Core;
-using System.Dynamic;
 using RuleEngineTest.RuleEntity;
-using System.Linq.Dynamic.Core.Parser;
-using System.Linq.Expressions;
 using RulesEngine.RuleModel;
 using RulesEngine.RuleParser;
-using RulesEngine.Tests;
 
 namespace RuleEngineTest
 {

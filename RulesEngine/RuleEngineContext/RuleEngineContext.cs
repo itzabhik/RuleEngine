@@ -3,7 +3,7 @@ using System;
 
 namespace RulesEngine.RuleEngineContext
 {
-    public class RuleEngineContext : IRuleEngineContext
+    internal class RuleEngineContext : IRuleEngineContext
     {
         internal RuleEntityContextMetadata EntityContextMetadata { get; }
 

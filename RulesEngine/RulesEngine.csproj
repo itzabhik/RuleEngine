@@ -45,9 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IRuleEngine.cs" />
     <Compile Include="Diagnostic\IDiagnosticAwareEntity.cs" />
     <Compile Include="GroupRuleSet\LamdaGroupRuleSet.cs" />
+    <Compile Include="IRuleInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RuleEngineContext\IRuleEngineContext.cs" />
     <Compile Include="RuleEngineContext\RuleEngineContext.cs" />
