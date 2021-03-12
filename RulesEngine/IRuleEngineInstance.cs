@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace RulesEngine
 {
-    interface IRuleInstance<TEntity> where TEntity : RuleAwareEntity
+    public interface IRuleEngineInstance<TEntity> where TEntity : RuleAwareEntity
     {
+        void Execute(IEnumerable<TEntity> data);
 
+        void ExecuteAsync(IEnumerable<TEntity> data);
     }
 }

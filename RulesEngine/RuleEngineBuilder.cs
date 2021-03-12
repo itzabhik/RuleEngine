@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace RulesEngine
 {
-    public interface IRuleEngine<TEntity> where TEntity : RuleAwareEntity
+    public class RuleEngineBuilder<TEntity> where TEntity : RuleAwareEntity 
     {
-        IRuleEngineInstance<TEntity> GetInstance();
     }
 }
